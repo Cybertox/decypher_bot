@@ -1,0 +1,6 @@
+pyTelegramBotAPI==3.6.6
+pytz==2019.2
+requests==2.7.0
+roman==3.2
+six==1.12.0
+telebot==0.0.3
