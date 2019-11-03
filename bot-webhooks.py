@@ -35,7 +35,7 @@ updater.start_webhook(listen="0.0.0.0",
                       port=PORT,
                       url_path=TOKEN)
 
-updater.bot.set_webhook("https://decypher-boherokuapp.com/" + TOKEN)
+updater.bot.set_webhook("https://decypher-bot/herokuapp.com/" + TOKEN)
 updater.idle()
 
 #bot.polling(none_stop=True)
