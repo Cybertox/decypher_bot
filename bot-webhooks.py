@@ -31,6 +31,7 @@ def decypher_code(message):
     bot.send_message(message.chat.id, msg)
 
 
+bot.remove_webhook()
 updater.start_webhook(listen="0.0.0.0",
                       port=PORT,
                       url_path=TOKEN)
