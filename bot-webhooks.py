@@ -6,7 +6,7 @@ import re
 #import config
 import os
 
-from config import TOKEN, TIMEZONE, TIMEZONE_COMMON_NAME
+#from config import TOKEN, TIMEZONE, TIMEZONE_COMMON_NAME
 from telegram.ext import Updater
 
 
@@ -14,8 +14,10 @@ from telegram.ext import Updater
 P_TIMEZONE = pytz.timezone(TIMEZONE)
 TIMEZONE_COMMON_NAME = TIMEZONE_COMMON_NAME
 
-bot = telebot.TeleBot(TOKEN)
+TOKEN = "TOKEN"
 PORT = int(os.environ.get('PORT', '8443'))
+bot = telebot.TeleBot(TOKEN)
+
 updater = Updater(TOKEN, use_context=True)
 
 @bot.message_handler(commands=['start'])
