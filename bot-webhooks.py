@@ -6,11 +6,11 @@ import re
 #import config
 import os
 
-#from config import TOKEN, TIMEZONE, TIMEZONE_COMMON_NAME
+from config import TOKEN, PORT, URL
 from telegram.ext import Updater
 
-TOKEN = "TOKEN"
-PORT = int(os.environ.get('PORT', '8443'))
+
+#PORT = int(os.environ.get('PORT', '8443'))
 bot = telebot.TeleBot(TOKEN)
 
 updater = Updater(TOKEN, use_context=True)
@@ -33,7 +33,7 @@ updater.start_webhook(listen="0.0.0.0",
                       port=PORT,
                       url_path=TOKEN)
 
-updater.bot.set_webhook("https://decypher-bot/herokuapp.com/" + TOKEN)
+updater.bot.set_webhook(URL + TOKEN)
 updater.idle()
 
 #bot.polling(none_stop=True)
