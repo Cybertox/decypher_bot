@@ -29,7 +29,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://decypher-bot.herokuapp.com' + TOKEN)
+    bot.set_webhook(url='https://decypher-bot.herokuapp.com/' + TOKEN)
     return "!", 200
 
 if __name__ == "__main__":
