@@ -1,1 +1,1 @@
-web: python bot-webhooks.py
+web: python wh_flask.py
